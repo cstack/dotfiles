@@ -9,7 +9,8 @@
 fortune | cowsay
 
 # Aliases
-alias gs="git status"
+alias be="bundle exec"
+alias gap="git add --patch"
 alias gco="git checkout"
 alias gd="git diff"
-alias gap="git add --patch"
+alias gs="git status"
