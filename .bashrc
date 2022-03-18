@@ -1,13 +1,3 @@
-#  _________
-# < PIZZA!! >
-#  ---------
-#         \   ^__^
-#          \  (oo)\_______
-#             (__)\       )\/\
-#                 ||----w |
-#                 ||     ||
-fortune | cowsay
-
 # Aliases
 alias be="bundle exec"
 alias gap="git add --patch"
