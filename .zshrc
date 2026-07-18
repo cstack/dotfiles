@@ -22,10 +22,23 @@ alias gp="git pull"
 alias gs="git status"
 alias reload="source ${THIS_FILE}"
 alias venv="(test -d venv || python -m venv venv) && source venv/bin/activate"
-alias update-agents="npm install -g @openai/codex @anthropic-ai/claude-code"
 
 function who_is_listening_on_port {
   lsof -nP -iTCP -sTCP:LISTEN | grep $1
+}
+
+function update-agents {
+  if brew list --cask codex >/dev/null 2>&1; then
+    brew upgrade --cask codex
+  else
+    brew install --cask codex
+  fi
+
+  if brew list --cask claude-code >/dev/null 2>&1; then
+    brew upgrade --cask claude-code
+  else
+    brew install --cask claude-code
+  fi
 }
 
 current_git_branch() {
